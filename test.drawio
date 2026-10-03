@@ -1,0 +1,392 @@
+<mxfile host="65bd71144e">
+    <diagram id="pShZ8I9Q2LU8kTYmBnz3" name="Page-1">
+        <mxGraphModel dx="2620" dy="721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="60" width="120" x="30" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="" vertex="1">
+                    <mxGeometry height="60" width="120" x="620" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Client" vertex="1">
+                    <mxGeometry height="30" width="60" x="50" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Server" vertex="1">
+                    <mxGeometry height="30" width="60" x="650" y="175" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-6" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=1;" value="">
+                    <mxGeometry relative="1" width="80" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="160" y="722" as="sourcePoint"/>
+                        <mxPoint x="160" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-7" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=1;" value="">
+                    <mxGeometry relative="1" width="80" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="610" y="722" as="sourcePoint"/>
+                        <mxPoint x="610" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Close" vertex="1">
+                    <mxGeometry height="30" width="60" x="170" y="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="180" y="175" as="sourcePoint"/>
+                        <mxPoint x="610" y="205" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-13" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="600" y="210" as="sourcePoint"/>
+                        <mxPoint x="170" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="request1" vertex="1">
+                    <mxGeometry height="30" width="60" x="210" y="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="response1" vertex="1">
+                    <mxGeometry height="30" width="60" x="520" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-16" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="110" y="350" as="sourcePoint"/>
+                        <mxPoint x="670" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Close" vertex="1">
+                    <mxGeometry height="30" width="60" x="170" y="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-18" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="180" y="415" as="sourcePoint"/>
+                        <mxPoint x="610" y="445" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-19" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="600" y="450" as="sourcePoint"/>
+                        <mxPoint x="170" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="request2" vertex="1">
+                    <mxGeometry height="30" width="60" x="210" y="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="response2" vertex="1">
+                    <mxGeometry height="30" width="60" x="520" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-22" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="110" y="590" as="sourcePoint"/>
+                        <mxPoint x="670" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="60" width="120" x="330" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;I.e. One request - response cycle at a time&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="330" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Currently our Node Backend Project communicates in this way between a client and server&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="510" x="150" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Simple request-response cycle&lt;br&gt;&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="510" x="150" y="690" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-27" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="-220" y="750" as="sourcePoint"/>
+                        <mxPoint x="920" y="750" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Suppose we are making a chatting application in this simple architecture&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="850" y="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-29" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" value="" vertex="1">
+                    <mxGeometry height="100" width="105" x="373" y="850" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-45" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" value="" vertex="1">
+                    <mxGeometry height="100" width="105" x="623" y="1460" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-30" parent="1" style="image;html=1;image=img/lib/clip_art/people/Telesales_Woman_128x128.png" value="" vertex="1">
+                    <mxGeometry height="80" width="80" x="-20" y="1310" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-39" parent="1" style="image;html=1;image=img/lib/clip_art/people/Telesales_Woman_128x128.png" value="" vertex="1">
+                    <mxGeometry height="80" width="80" x="510" y="1840" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-31" parent="1" style="image;html=1;image=img/lib/clip_art/people/Telesales_Woman_128x128.png" value="" vertex="1">
+                    <mxGeometry height="80" width="80" x="770" y="1310" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-40" parent="1" style="image;html=1;image=img/lib/clip_art/people/Telesales_Woman_128x128.png" value="" vertex="1">
+                    <mxGeometry height="80" width="80" x="830" y="1840" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-32" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-30" style="endArrow=classic;html=1;rounded=1;entryX=0;entryY=0.89;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r5ayQANOhl4-_n7Ag0gp-29" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="210" y="1120"/>
+                        </Array>
+                        <mxPoint x="140" y="1110" as="sourcePoint"/>
+                        <mxPoint x="190" y="1060" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-41" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-39" style="endArrow=classic;html=1;rounded=1;entryX=0;entryY=0.89;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="r5ayQANOhl4-_n7Ag0gp-45" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="675.5" y="1750"/>
+                        </Array>
+                        <mxPoint x="390" y="1720" as="sourcePoint"/>
+                        <mxPoint x="440" y="1670" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-33" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-31" style="endArrow=classic;html=1;rounded=1;exitX=0.406;exitY=0.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.976;entryY=0.89;entryDx=0;entryDy=0;entryPerimeter=0;" target="r5ayQANOhl4-_n7Ag0gp-29" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="670" y="1150"/>
+                            <mxPoint x="540" y="1010"/>
+                        </Array>
+                        <mxPoint x="590" y="1090" as="sourcePoint"/>
+                        <mxPoint x="430" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-42" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-40" style="endArrow=classic;html=1;rounded=1;exitX=0.406;exitY=0.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.976;entryY=0.89;entryDx=0;entryDy=0;entryPerimeter=0;" target="r5ayQANOhl4-_n7Ag0gp-45" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="780" y="1810"/>
+                            <mxPoint x="725.48" y="1760"/>
+                        </Array>
+                        <mxPoint x="840" y="1700" as="sourcePoint"/>
+                        <mxPoint x="680" y="1540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-34" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-30" style="endArrow=none;dashed=1;html=1;rounded=1;entryX=0.125;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.938;exitY=0.644;exitDx=0;exitDy=0;exitPerimeter=0;" target="r5ayQANOhl4-_n7Ag0gp-31" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="170" y="1160" as="sourcePoint"/>
+                        <mxPoint x="480" y="940" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-43" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-39" style="endArrow=none;dashed=1;html=1;rounded=1;entryX=0.125;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.938;exitY=0.644;exitDx=0;exitDy=0;exitPerimeter=0;" target="r5ayQANOhl4-_n7Ag0gp-40" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="420" y="1770" as="sourcePoint"/>
+                        <mxPoint x="730" y="1550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-35" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp;Chatting App&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Since User 1 and User 2 cannot communicate to each other directly.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;They need a Server medium Help. Suppose user 1 wants to send message to user 2. User 1 will make a message packet send to the server.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;User 2 will be requesting to server every second that &quot;Has any message arrived for me?&quot;.&lt;br&gt;Now, since packet is arrived at server, user 2 will be able to receive message and this goes on.&lt;br&gt;&lt;br&gt;If there is atleast 1000 users in server, it will require lots of resources, storage, internet bills and many more other things&lt;/font&gt;&lt;/p&gt;" vertex="1">
+                    <mxGeometry height="360" width="350" x="260" y="1010" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;User 1&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="60" x="-10" y="1390" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;User 2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="60" x="780" y="1380" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-46" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-45" style="endArrow=classic;html=1;rounded=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="r5ayQANOhl4-_n7Ag0gp-39" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="510" y="1690"/>
+                        </Array>
+                        <mxPoint x="590" y="1540" as="sourcePoint"/>
+                        <mxPoint x="540" y="1820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-48" edge="1" parent="1" source="r5ayQANOhl4-_n7Ag0gp-45" style="endArrow=classic;html=1;rounded=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="r5ayQANOhl4-_n7Ag0gp-40" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="870" y="1680"/>
+                        </Array>
+                        <mxPoint x="540" y="1834" as="sourcePoint"/>
+                        <mxPoint x="870" y="1820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-49" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="-130" y="1450" as="sourcePoint"/>
+                        <mxPoint x="930" y="1440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-51" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="-1000" y="2070" as="sourcePoint"/>
+                        <mxPoint x="2480" y="2070" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-50" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;This is called Pooling.&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;Pooling is a request-response cycle where every client in our case is requesting to server in every 1 second.&lt;br&gt;And as a developer point of view, this is very very overkill thing.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;If there are 1000 of clients are requesting at every repetation of 1 second, the load in server will increase very rapidly.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;In pooling after every second request is coming to server, even though the server is responding with empty response if no message packets is sent for the user.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;Many request-response is getting wasted.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;This is increasing load unnecessarily.&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;Web Socket is the solution of this problem.&lt;/font&gt;&lt;/p&gt;" vertex="1">
+                    <mxGeometry height="600" width="540" x="-30" y="1450" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5ayQANOhl4-_n7Ag0gp-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;Web Socket.&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="820" x="20" y="2110" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;Server&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="20" width="60" x="820" y="2270" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-71" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=1;" value="">
+                    <mxGeometry relative="1" width="80" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="90" y="3850" as="sourcePoint"/>
+                        <mxPoint x="90" y="2230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-72" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=1;" value="">
+                    <mxGeometry relative="1" width="80" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="810" y="3840" as="sourcePoint"/>
+                        <mxPoint x="810" y="2230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-74" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="90" y="2270" as="sourcePoint"/>
+                        <mxPoint x="790" y="2480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-75" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="790" y="2500" as="sourcePoint"/>
+                        <mxPoint x="100" y="2630" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="request1" vertex="1">
+                    <mxGeometry height="30" width="60" x="100" y="2280" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="response1" vertex="1">
+                    <mxGeometry height="30" width="60" x="100" y="2640" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-80" connectable="0" parent="1" style="group" value="" vertex="1">
+                    <mxGeometry height="60" width="120" x="-40" y="2260" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-68" parent="8ixdqejY3-KzBfXecWcH-80" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="60" width="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-69" parent="8ixdqejY3-KzBfXecWcH-80" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Client" vertex="1">
+                    <mxGeometry height="30" width="60" x="20" y="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-82" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;HTTP (WS) Web Socket&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;We use something as &#39;upgrade header&#39; to solve our previous problem&lt;/font&gt;&lt;/p&gt;" vertex="1">
+                    <mxGeometry height="150" width="270" x="90" y="2350" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-83" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Web Socket Connection&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;WeServer response with &#39;OK&#39; response indicating it will make web socket based http connection&amp;nbsp;&lt;/font&gt;&lt;/p&gt;" vertex="1">
+                    <mxGeometry height="190" width="290" x="520" y="2550" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-84" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;HTTP - request for upgrading to Web Socket&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="80" width="280" x="110" y="2230" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Now the connection will not close&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="440" x="170" y="2750" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-87" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=1;entryX=0.992;entryY=0.859;entryDx=0;entryDy=0;entryPerimeter=0;" target="8ixdqejY3-KzBfXecWcH-83" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="85" y="2710" as="sourcePoint"/>
+                        <mxPoint x="800" y="2710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-90" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=1;entryX=0.992;entryY=0.859;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="87" y="2780" as="sourcePoint"/>
+                        <mxPoint x="810" y="2783" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-92" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="790" y="2830" as="sourcePoint"/>
+                        <mxPoint x="100" y="2960" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-93" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="response 2" vertex="1">
+                    <mxGeometry height="30" width="110" x="160" y="2950" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-94" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="800" y="2990" as="sourcePoint"/>
+                        <mxPoint x="110" y="3120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="response 3" vertex="1">
+                    <mxGeometry height="30" width="110" x="170" y="3110" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-96" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="800" y="3150" as="sourcePoint"/>
+                        <mxPoint x="110" y="3280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="response 4" vertex="1">
+                    <mxGeometry height="30" width="110" x="170" y="3270" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-98" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Server and client can communicate simultaneously&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="700" x="100" y="3370" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-99" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=1;entryX=0.992;entryY=0.859;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="85" y="3340" as="sourcePoint"/>
+                        <mxPoint x="808" y="3343" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-100" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=1;entryX=0.992;entryY=0.859;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="87" y="3410" as="sourcePoint"/>
+                        <mxPoint x="810" y="3413" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-101" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="100" y="3440" as="sourcePoint"/>
+                        <mxPoint x="780" y="3440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-102" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="780" y="3480" as="sourcePoint"/>
+                        <mxPoint x="100" y="3480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-103" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="100" y="3520" as="sourcePoint"/>
+                        <mxPoint x="780" y="3520" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-106" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="100" y="3640" as="sourcePoint"/>
+                        <mxPoint x="780" y="3640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-107" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="100" y="3680" as="sourcePoint"/>
+                        <mxPoint x="780" y="3680" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-104" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="100" y="3560" as="sourcePoint"/>
+                        <mxPoint x="780" y="3560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-105" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Communication Becomes bi-directional&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="470" x="230" y="3580" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-108" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;If User wants to close communication, user can close the communication&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="30" width="680" x="90" y="3700" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ixdqejY3-KzBfXecWcH-109" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;So What is web socket actually ?&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Web socket is nothing it is just a Protocol, which generally doesnot close any connection between server and client&lt;/font&gt;&lt;/p&gt;" vertex="1">
+                    <mxGeometry height="120" width="710" x="100" y="3850" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="iFHyBfrUOdDF2CVbj879" name="Page-2">
+        <mxGraphModel dx="736" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="VPfZ-YOQnCdN8JUzeGmc-0"/>
+                <mxCell id="VPfZ-YOQnCdN8JUzeGmc-1" parent="VPfZ-YOQnCdN8JUzeGmc-0"/>
+                <mxCell id="tID03h2woXfJbQwyi6aS-0" parent="VPfZ-YOQnCdN8JUzeGmc-1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;strokeColor=#FFFF99;fillColor=#66FFFF;" value="" vertex="1">
+                    <mxGeometry height="60" width="120" x="20" y="160" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse — Real-time Chat</title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💬</text></svg>" />
+</head>
+
+<body class="bg-surface-950 bg-grid min-h-screen text-slate-100 overflow-hidden">
+
+    <!-- 🚪 WELCOME MODAL -->
+    <div id="usernameModal"
+        class="fixed inset-0 bg-surface-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
+        <div class="bg-surface-900 border border-slate-800 rounded-2xl p-8 shadow-2xl max-w-md w-full animate-slide-up">
+            <!-- Logo -->
+            <div class="flex items-center justify-center mb-6">
+                <div
+                    class="w-14 h-14 bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/30">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="text-2xl font-semibold text-white text-center mb-2">Welcome to Pulse</h1>
+            <p class="text-slate-400 text-center text-sm mb-6">Choose a display name to start chatting</p>
+
+            <div class="space-y-3">
+                <div>
+                    <input id="usernameInput" type="text" placeholder="Enter your name" maxlength="20"
+                        class="w-full px-4 py-3 bg-surface-800 text-white rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all placeholder:text-slate-500" />
+                    <p id="usernameError" class="text-red-400 text-xs mt-2 hidden"></p>
+                </div>
+
+                <button id="joinBtn"
+                    class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-lg transition-all shadow-lg shadow-brand-600/20 hover:shadow-brand-600/40 active:scale-[0.98]">
+                    Continue
+                </button>
+            </div>
+
+            <p class="text-slate-500 text-xs text-center mt-6">
+                By continuing, you agree to be respectful to others.
+            </p>
+        </div>
+    </div>
+
+    <!-- 🎨 MAIN LAYOUT -->
+    <div class="h-screen flex">
+
+        <!-- 📋 SIDEBAR -->
+        <aside class="hidden md:flex w-72 bg-surface-900/50 border-r border-slate-800 flex-col">
+            <!-- Logo header -->
+            <div class="p-5 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-9 h-9 bg-gradient-to-br from-brand-500 to-brand-700 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-semibold">Pulse</h2>
+                        <p class="text-slate-500 text-xs">General Channel</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online section -->
+            <div class="p-5 flex-1 overflow-y-auto scrollbar-elegant">
+                <div class="flex items-center justify-between mb-3">
+                    <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                        Online — <span id="onlineCount">0</span>
+                    </h3>
+                </div>
+                <ul id="onlineUsers" class="space-y-1"></ul>
+            </div>
+
+            <!-- Current user footer -->
+            <div id="currentUserFooter" class="p-4 border-t border-slate-800 bg-surface-900/80">
+                <div class="flex items-center gap-3">
+                    <div id="currentUserAvatar"
+                        class="w-9 h-9 rounded-full flex items-center justify-center text-white font-semibold text-sm shadow-md">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p id="currentUserName" class="text-white text-sm font-medium truncate"></p>
+                        <div class="flex items-center gap-1.5">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                            <p class="text-slate-500 text-xs">Active</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 💬 CHAT AREA -->
+        <main class="flex-1 flex flex-col bg-surface-950">
+
+            <!-- Chat header -->
+            <header class="h-16 border-b border-slate-800 glass flex items-center justify-between px-6">
+                <div class="flex items-center gap-3">
+                    <div class="md:hidden w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">#</span>
+                    </div>
+                    <div>
+                        <h1 class="text-white font-semibold flex items-center gap-2">
+                            <span class="text-slate-500">#</span> general
+                        </h1>
+                        <p class="text-slate-500 text-xs hidden sm:block">Public conversation</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full">
+                    <div class="relative flex">
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-green-500 rounded-full absolute animate-ping"></div>
+                    </div>
+                    <span class="text-green-400 text-xs font-medium">Connected</span>
+                </div>
+            </header>
+
+            <!-- Messages -->
+            <div id="messages" class="flex-1 overflow-y-auto scrollbar-elegant px-6 py-6 space-y-1">
+                <!-- Empty state -->
+                <div id="emptyState" class="h-full flex flex-col items-center justify-center text-center">
+                    <div class="w-16 h-16 bg-surface-800 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-medium mb-1">No messages yet</h3>
+                    <p class="text-slate-500 text-sm">Be the first to say hello 👋</p>
+                </div>
+            </div>
+
+            <!-- Typing indicator -->
+            <div id="typingIndicator" class="px-6 h-6 flex items-center gap-2 text-slate-400 text-xs hidden">
+                <div class="flex gap-0.5">
+                    <span class="w-1 h-1 bg-slate-400 rounded-full animate-pulse-dot"></span>
+                    <span class="w-1 h-1 bg-slate-400 rounded-full animate-pulse-dot"
+                        style="animation-delay: 0.2s"></span>
+                    <span class="w-1 h-1 bg-slate-400 rounded-full animate-pulse-dot"
+                        style="animation-delay: 0.4s"></span>
+                </div>
+                <span><strong id="typingUser" class="text-slate-300"></strong> is typing</span>
+            </div>
+
+            <!-- Composer -->
+            <div class="p-4 border-t border-slate-800 glass">
+                <form id="chatForm" class="flex items-end gap-3">
+                    <div
+                        class="flex-1 bg-surface-800 border border-slate-700 rounded-xl focus-within:border-brand-500 focus-within:ring-2 focus-within:ring-brand-500/20 transition-all">
+                        <textarea id="messageInput" placeholder="Message #general" rows="1" maxlength="500"
+                            class="w-full bg-transparent text-white px-4 py-3 focus:outline-none resize-none placeholder:text-slate-500 max-h-32 scrollbar-elegant"></textarea>
+                        <div class="flex items-center justify-between px-4 pb-2">
+                            <span class="text-xs text-slate-600">Press <kbd
+                                    class="px-1.5 py-0.5 bg-surface-900 rounded border border-slate-700 text-slate-400">Enter</kbd>
+                                to send</span>
+                            <span id="charCount" class="text-xs text-slate-600">0 / 500</span>
+                        </div>
+                    </div>
+                    <button type="submit" id="sendBtn"
+                        class="w-11 h-11 bg-brand-600 hover:bg-brand-700 disabled:bg-surface-800 disabled:text-slate-600 text-white rounded-xl flex items-center justify-center transition-all shadow-lg shadow-brand-600/20 hover:shadow-brand-600/40 active:scale-95 disabled:shadow-none"
+                        disabled>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- 🔔 TOAST CONTAINER -->
+    <div id="toastContainer" class="fixed top-4 right-4 z-40 space-y-2"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // State
+        let currentUser = null;
+        let typingTimeout;
+        let lastMessageUser = null;
+        let lastMessageTime = null;
+
+        // DOM refs
+        const $ = (id) => document.getElementById(id);
+        const usernameModal = $("usernameModal");
+        const usernameInput = $("usernameInput");
+        const usernameError = $("usernameError");
+        const joinBtn = $("joinBtn");
+        const messagesEl = $("messages");
+        const emptyState = $("emptyState");
+        const chatForm = $("chatForm");
+        const messageInput = $("messageInput");
+        const sendBtn = $("sendBtn");
+        const charCount = $("charCount");
+        const onlineCountEl = $("onlineCount");
+        const onlineUsersEl = $("onlineUsers");
+        const typingIndicator = $("typingIndicator");
+        const typingUserEl = $("typingUser");
+        const currentUserAvatar = $("currentUserAvatar");
+        const currentUserName = $("currentUserName");
+        const toastContainer = $("toastContainer");
+
+        // Helpers
+        const avatarColors = [
+            "#f87171", "#fb923c", "#fbbf24", "#a3e635",
+            "#34d399", "#22d3ee", "#60a5fa", "#a78bfa",
+            "#e879f9", "#f472b6"
+        ];
+
+        function getColorForUser(username) {
+            let hash = 0;
+            for (let i = 0; i < username.length; i++) {
+                hash = username.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            return avatarColors[Math.abs(hash) % avatarColors.length];
+        }
+
+        function getInitials(name) {
+            return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement("div");
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function formatTime(iso) {
+            return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function scrollToBottom() {
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+        }
+
+        // 🚪 JOIN FLOW
+        function showError(msg) {
+            usernameError.textContent = msg;
+            usernameError.classList.remove("hidden");
+            usernameInput.classList.add("border-red-500");
+        }
+
+        function clearError() {
+            usernameError.classList.add("hidden");
+            usernameInput.classList.remove("border-red-500");
+        }
+
+        usernameInput.addEventListener("input", clearError);
+
+        function joinChat() {
+            const username = usernameInput.value.trim();
+            if (username.length < 2) return showError("Name must be at least 2 characters");
+            if (username.length > 20) return showError("Name must be under 20 characters");
+
+            currentUser = { username, color: getColorForUser(username) };
+            socket.emit("user-join", username);
+
+            // Update sidebar footer
+            currentUserAvatar.style.backgroundColor = currentUser.color;
+            currentUserAvatar.textContent = getInitials(username);
+            currentUserName.textContent = username;
+
+            usernameModal.classList.add("hidden");
+            messageInput.focus();
+        }
+
+        joinBtn.addEventListener("click", joinChat);
+        usernameInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") joinChat();
+        });
+
+        // 💬 MESSAGE INPUT
+        messageInput.addEventListener("input", () => {
+            const len = messageInput.value.length;
+            charCount.textContent = `${len} / 500`;
+            sendBtn.disabled = messageInput.value.trim().length === 0;
+
+            // Auto-resize
+            messageInput.style.height = "auto";
+            messageInput.style.height = Math.min(messageInput.scrollHeight, 128) + "px";
+
+            // Typing
+            socket.emit("typing");
+            clearTimeout(typingTimeout);
+            typingTimeout = setTimeout(() => socket.emit("stop-typing"), 1000);
+        });
+
+        messageInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                chatForm.requestSubmit();
+            }
+        });
+
+        chatForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            socket.emit("user-message", message);
+            socket.emit("stop-typing");
+            messageInput.value = "";
+            messageInput.style.height = "auto";
+            charCount.textContent = "0 / 500";
+            sendBtn.disabled = true;
+        });
+
+        // 📥 RECEIVE MESSAGE
+        socket.on("message", (data) => {
+            if (emptyState) emptyState.remove();
+
+            const isOwn = data.socketId === socket.id;
+            const time = formatTime(data.timestamp);
+
+            // Group consecutive messages from same user within 5 minutes
+            const timeDiff = lastMessageTime ? (new Date(data.timestamp) - new Date(lastMessageTime)) / 60000 : Infinity;
+            const isGrouped = lastMessageUser === data.socketId && timeDiff < 5;
+
+            const wrapper = document.createElement("div");
+            wrapper.className = `flex gap-3 animate-fade-in ${isGrouped ? 'mt-0.5' : 'mt-4'} ${isOwn ? 'flex-row-reverse' : ''}`;
+
+            // Avatar (only on first message of group)
+            const avatarHtml = isGrouped
+                ? `<div class="w-9 flex-shrink-0"></div>`
+                : `<div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-semibold flex-shrink-0 shadow-md" style="background-color: ${data.color}">
+                     ${getInitials(data.username)}
+                   </div>`;
+
+            // Header (name + time)
+            const headerHtml = isGrouped ? '' : `
+                <div class="flex items-baseline gap-2 mb-1 ${isOwn ? 'justify-end' : ''}">
+                    <span class="text-sm font-semibold" style="color: ${data.color}">${escapeHtml(data.username)}</span>
+                    <span class="text-xs text-slate-500">${time}</span>
+                </div>
+            `;
+
+            wrapper.innerHTML = `
+                ${avatarHtml}
+                <div class="flex flex-col max-w-[70%] ${isOwn ? 'items-end' : 'items-start'}">
+                    ${headerHtml}
+                    <div class="px-4 py-2 rounded-2xl ${isOwn
+                    ? 'bg-brand-600 text-white rounded-tr-sm'
+                    : 'bg-surface-800 text-slate-100 rounded-tl-sm'} break-words">
+                        ${escapeHtml(data.message).replace(/\n/g, '<br>')}
+                    </div>
+                </div>
+            `;
+
+            messagesEl.appendChild(wrapper);
+            lastMessageUser = data.socketId;
+            lastMessageTime = data.timestamp;
+            scrollToBottom();
+        });
+
+        // 🚪 JOIN / LEAVE EVENTS
+        function addSystemDivider(username, type) {
+            const icon = type === "join"
+                ? `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>`
+                : `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>`;
+
+            const color = type === "join" ? "text-emerald-400" : "text-slate-500";
+
+            const div = document.createElement("div");
+            div.className = "flex items-center gap-3 my-4 animate-fade-in";
+            div.innerHTML = `
+                <div class="flex-1 h-px bg-slate-800"></div>
+                <div class="flex items-center gap-1.5 ${color} text-xs font-medium">
+                    ${icon}
+                    <span><strong class="text-slate-300">${escapeHtml(username)}</strong> ${type === "join" ? "joined" : "left"}</span>
+                </div>
+                <div class="flex-1 h-px bg-slate-800"></div>
+            `;
+            messagesEl.appendChild(div);
+            scrollToBottom();
+        }
+
+        socket.on("user-joined", (data) => {
+            if (emptyState) emptyState.remove();
+            addSystemDivider(data.username, "join");
+            showToast(`${data.username} joined the chat`, "info");
+        });
+
+        socket.on("user-left", (data) => {
+            addSystemDivider(data.username, "leave");
+        });
+
+        // 👥 ONLINE USERS
+        socket.on("online-users", (users) => {
+            onlineCountEl.textContent = users.length;
+            onlineUsersEl.innerHTML = users.map(user => `
+                <li class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-surface-800 transition-colors cursor-pointer">
+                    <div class="relative">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-semibold" style="background-color: ${user.color}">
+                            ${getInitials(user.username)}
+                        </div>
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 border-2 border-surface-900 rounded-full"></div>
+                    </div>
+                    <span class="text-slate-300 text-sm truncate">${escapeHtml(user.username)}</span>
+                </li>
+            `).join("");
+        });
+
+        // ⌨️ TYPING
+        socket.on("user-typing", (username) => {
+            typingUserEl.textContent = username;
+            typingIndicator.classList.remove("hidden");
+        });
+
+        socket.on("user-stop-typing", () => {
+            typingIndicator.classList.add("hidden");
+        });
+
+        // 🔔 TOAST SYSTEM
+        function showToast(message, type = "info") {
+            const colors = {
+                info: "bg-brand-600",
+                success: "bg-emerald-600",
+                error: "bg-red-600"
+            };
+
+            const toast = document.createElement("div");
+            toast.className = `${colors[type]} text-white px-4 py-2.5 rounded-lg shadow-lg text-sm font-medium animate-slide-up flex items-center gap-2 max-w-xs`;
+            toast.innerHTML = `
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>${escapeHtml(message)}</span>
+            `;
+            toastContainer.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = "0";
+                toast.style.transition = "opacity 0.3s";
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Connection events
+        socket.on("connect", () => console.log("Connected to server"));
+        socket.on("disconnect", () => showToast("Disconnected from server", "error"));
+
+        // Auto focus
+        usernameInput.focus();
+    </script>
+</body>
+
+</html>
